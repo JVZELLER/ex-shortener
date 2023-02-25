@@ -5,7 +5,7 @@ config :ex_shortener, ExShortener.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "ex_shortener_dev",
+  database: "ex_shortener",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
