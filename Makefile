@@ -11,7 +11,8 @@ wait-postgres:
 .PHONY: prepare
 prepare:
 	docker compose up -d
-	@make wait-postgres
+	make wait-postgres
+	MIX_ENV=test mix ecto.setup
 
 .PHONY: down
 down:
