@@ -10,9 +10,9 @@ wait-postgres:
 
 .PHONY: prepare
 prepare:
-	docker-compose up -d
+	docker compose up -d
 	@make wait-postgres
 
 .PHONY: down
 down:
-	docker-compose down -v --remove-orphans
+	docker compose down -v --remove-orphans
