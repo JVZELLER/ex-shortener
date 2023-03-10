@@ -10,6 +10,9 @@ defmodule ExShortener.Schema do
       import Ecto.Changeset
 
       @primary_key {:id, Ecto.UUID, autogenerate: true}
+
+      @typedoc "Schema type"
+      @type t :: %__MODULE__{}
     end
   end
 end
