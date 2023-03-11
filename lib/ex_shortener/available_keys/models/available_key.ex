@@ -19,6 +19,6 @@ defmodule ExShortener.AvailableKeys.Models.AvailableKey do
 
     schema
     |> cast(params, fields)
-    |> validate_required(fields)
+    |> validate_required([:key_id])
   end
 end
