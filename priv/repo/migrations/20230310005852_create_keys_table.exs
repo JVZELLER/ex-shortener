@@ -10,5 +10,9 @@ defmodule ExShortener.Repo.Migrations.CreateKeysTable do
 
       timestamps()
     end
+
+    :keys
+    |> unique_index([:value])
+    |> create_if_not_exists()
   end
 end
