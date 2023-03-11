@@ -7,6 +7,7 @@ defmodule ExShortener.Repo.Migrations.CreateKeysTable do
       add(:value, :string)
       add(:expires_at, :naive_datetime)
       add(:used, :boolean)
+      add(:url, :string)
 
       timestamps()
     end

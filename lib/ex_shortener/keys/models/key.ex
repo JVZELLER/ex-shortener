@@ -7,10 +7,13 @@ defmodule ExShortener.Keys.Models.Key do
 
   alias ExShortener.AvailableKeys.Models.AvailableKey
 
+  @required ~w(value expires_at used url)a
+
   schema "keys" do
     field(:value, :string)
     field(:expires_at, :naive_datetime)
     field(:used, :boolean)
+    field(:url, :string)
 
     has_one(:available_key, AvailableKey)
 
@@ -23,6 +26,6 @@ defmodule ExShortener.Keys.Models.Key do
 
     schema
     |> cast(params, fields)
-    |> validate_required(fields)
+    |> validate_required(@required)
   end
 end
